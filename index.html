@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Little Pigs</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="strawH" src="assets/StrawH.png"> 
+            <img id="strawV" src="assets/StrawV.png"> 
+            <img id="sticksH" src="assets/SticksH.png">
+            <img id="sticksV" src="assets/SticksV.png">
+            <img id="brickH" src="assets/BrickH.png">
+            <img id="brickV" src="assets/BrickV.png">
+            <img id="grass" src="assets/grass.jpg">
+            <img id="dirtFloor" src="assets/DirtFloor.png">
+            <img id="slateRoof" src="assets/SlateRoof.png">
+            <img id="sky" src="assets/sky.jpg">
+        </a-assets>
+        <a-plane 
+            width="100" 
+            height="100" 
+            src="#grass" 
+            repeat="10 10"
+            rotation="-90" 
+            position="0 0 0"></a-plane>
+            <a-sky 
+            src="#sky"></a-sky>
+        <a-plane 
+            width="10" 
+            src="#sticksV" 
+            normal-map="assets/SticksNMV.png"
+            repeat="2 1"
+            normal-texture-repeat="2 1"
+            height="20" 
+            rotation="-90 0 90" 
+            position="0 0.001 -20" >
+            <a-box 
+                src="#brickH" 
+                normal-map="assets/BrickNMH.jpg" 
+                height="10" 
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="0 10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#brickV" 
+                    normal-map="assets/BrickNMV.jpg" 
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692"></a-cylinder>
+            </a-box>
+            <a-box 
+                src="#brickH" 
+                normal-map="assets/BrickNMH.jpg"  
+                height="10" 
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="00 -10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#brickV" 
+                    normal-map="assets/BrickNMV.jpg" 
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692">
+                </a-cylinder>
+            </a-box>
+            <a-box 
+                src="#brickH" 
+                normal-map="assets/BrickNMH.jpg" 
+                repeat="2 1" 
+                normal-texture-repeat="2 1"
+                position="4.875 0 5" 
+                rotation="0 90 90" 
+                width="20" 
+                height="10" 
+                depth="0.25">
+            </a-box>
+            <a-box 
+                src="#brickH" 
+                normal-map="assets/BrickNMH.jpg" 
+                repeat="0.2 0.2"
+                normal-texture-repeat="0.2 0.2"
+                position="-4.875 0 9" 
+                rotation="0 90 90" 
+                width="2" 
+                height="2" 
+                depth="0.25">
+                <a-box 
+                    src="#brickH" 
+                    normal-map="assets/BrickNMH.jpg"  
+                    repeat="0.3 0.4"
+                    normal-texture-repeat="0.3 0.4"
+                    position="5.5 -1 0" 
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        position="3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        position="-3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 0.4"
+                        normal-texture-repeat="0.3 0.4"
+                        position="0 -6 0" 
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+                <a-box 
+                    src="#brickH" 
+                    normal-map="assets/BrickNMH.jpg" 
+                    repeat="0.3 0.4"
+                    normal-texture-repeat="0.3 0.4"
+                    position="-5.5 -1 0" 
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        position="3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        position="-3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#brickH" 
+                        normal-map="assets/BrickNMH.jpg" 
+                        repeat="0.3 0.4"
+                        normal-texture-repeat="0.3 0.4"
+                        position="0 -6 0" 
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+            </a-box>
+            <a-box
+                src="#brickH" 
+                normal-map="assets/BrickNMH.jpg"
+                repeat=".3 2"
+                normal-texture-repeat="0.3 2"
+                position="0 -10.625 10"
+                rotation="90 0 0"
+                height="20"
+                depth="1"
+                width="3"></a-box>
+            <a-box 
+                rotation="0 60 90" 
+                src="#slateRoof" 
+                normal-map="assets/SlateRoofNM.png"
+                repeat="2.1 2"
+                normal-texture-repeat="2.1 2"
+                position="2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+            <a-box 
+                rotation="0 -60 90" 
+                src="#slateRoof" 
+                normal-map="assets/SlateRoofNM.png"
+                repeat="2.1 2"
+                normal-texture-repeat="2.1 2"
+                position="-2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+        </a-plane>
+        <a-plane 
+            width="10" 
+            src="#sticksV" 
+            normal-map="assets/SticksNMV.png"
+            repeat="2 1"
+            normal-texture-repeat="2 1"
+            height="20" 
+            rotation="-90 0 45" 
+            position="30 0.001 -15" >
+            <a-box 
+                src="#sticksH"
+                normal-map="assets/SticksNMH.png"
+                repeat="1 5"
+                normal-texture-repeat="1 5"
+                height="10" 
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="0 10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#sticksV"
+                    normal-map="assets/SticksNMV.png"
+                    repeat="5 1"
+                    normal-texture-repeat="5 1"
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692"></a-cylinder>
+            </a-box>
+            <a-box 
+                src="#sticksH"
+                normal-map="assets/SticksNMH.png"
+                repeat="1 5"
+                normal-texture-repeat="1 5"
+                height="10" 
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="00 -10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#sticksV"
+                    normal-map="assets/SticksNMV.png"
+                    repeat="5 1"
+                    normal-texture-repeat="5 1" 
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692">
+                </a-cylinder>
+            </a-box>
+            <a-box 
+                src="#sticksH"
+                normal-map="assets/SticksNMH.png"
+                repeat="2 5"
+                normal-texture-repeat="2 5"
+                position="4.875 0 5" 
+                rotation="0 90 90" 
+                width="20" 
+                height="10" 
+                depth="0.25">
+            </a-box>
+            <a-box 
+                src="#sticksH"
+                normal-map="assets/SticksNMH.png"
+                repeat="0.2 1"
+                normal-texture-repeat="0.2 1" 
+                position="-4.875 0 9" 
+                rotation="0 90 90" 
+                width="2" 
+                height="2" 
+                depth="0.25">
+                <a-box 
+                    src="#sticksH"
+                    normal-map="assets/SticksNMH.png"
+                    repeat="0.3 2"
+                    normal-texture-repeat="0.3 2"
+                    position="5.5 -1 0" 
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 5"
+                        normal-texture-repeat="0.3 5" 
+                        position="3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 5"
+                        normal-texture-repeat="0.3 5" 
+                        position="-3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 2"
+                        normal-texture-repeat="0.3 2"
+                        position="0 -6 0" 
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+                <a-box 
+                    src="#sticksH"
+                    normal-map="assets/SticksNMH.png"
+                    repeat="0.3 2"
+                    normal-texture-repeat="0.3 2"
+                    position="-5.5 -1 0" 
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 5"
+                        normal-texture-repeat="0.3 5" 
+                        position="3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 5"
+                        normal-texture-repeat="0.3 5" 
+                        position="-3 -3 0" 
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        src="#sticksH"
+                        normal-map="assets/SticksNMH.png"
+                        repeat="0.3 2"
+                        normal-texture-repeat="0.3 2"
+                        position="0 -6 0" 
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+            </a-box>
+            <a-box 
+                rotation="0 60 90" 
+                src="#sticksH" 
+                normal-map="assets/SticksNMH.png"
+                repeat="2.1 5"
+                normal-texture-repeat="2.1 5"
+                position="2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+            <a-box 
+                rotation="0 -60 90" 
+                src="#sticksH" 
+                normal-map="assets/SticksNMH.png"
+                repeat="2.1 5"
+                normal-texture-repeat="2.1 5"
+                position="-2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+        </a-plane>
+        <a-plane 
+            width="10" 
+            src="#dirtFloor" 
+            normal-map="assets/DirtFloorNM.png"
+            repeat="2 1"
+            normal-texture-repeat="2 1"
+            height="20" 
+            rotation="-90 0 135" 
+            position="-30 0.001 -15" >
+            <a-box 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="1 1"
+                normal-texture-repeat="1 1"
+                height="10" 
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="0 10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#strawV"
+                    normal-map="assets/StrawNMV.png"
+                    repeat="1 1"
+                    normal-texture-repeat="1 1"
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692"></a-cylinder>
+            </a-box>
+            <a-box 
+                height="10" 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="1 1"
+                normal-texture-repeat="1 1"
+                width="10" 
+                depth="0.25" 
+                rotation="90" 
+                position="00 -10 5">
+                <a-cylinder 
+                    segments-radial="3" 
+                    src="#strawV"
+                    normal-map="assets/StrawNMV.png"
+                    repeat="1 1"
+                    normal-texture-repeat="1 1"
+                    rotation="-90 0 0" 
+                    height="0.25" 
+                    position="0 7.886751346 0"
+                    radius="5.773502692">
+                </a-cylinder>
+            </a-box>
+            <a-box 
+                position="4.875 0 5" 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="2 1"
+                normal-texture-repeat="2 1"
+                rotation="0 90 90" 
+                width="20" 
+                height="10" 
+                depth="0.25">
+            </a-box>
+            <a-box 
+                position="-4.875 0 9" 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="0.2 0.2"
+                normal-texture-repeat="0.2 0.2"
+                rotation="0 90 90" 
+                width="2" 
+                height="2" 
+                depth="0.25">
+                <a-box 
+                    position="5.5 -1 0" 
+                    src="#strawH"
+                    normal-map="assets/StrawNMH.png"
+                    repeat="0.3 0.4"
+                    normal-texture-repeat="0.3 0.4"
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        position="3 -3 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        position="-3 -3 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        position="0 -6 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 0.4"
+                        normal-texture-repeat="0.3 0.4"
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+                <a-box 
+                    position="-5.5 -1 0" 
+                    src="#strawH"
+                    normal-map="assets/StrawNMH.png"
+                    repeat="0.3 0.4"
+                    normal-texture-repeat="0.3 0.4"
+                    rotation="0 0 0" 
+                    width="3" 
+                    height="4" 
+                    depth="0.25">
+                    <a-box 
+                        position="3 -3 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        position="-3 -3 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 1"
+                        normal-texture-repeat="0.3 1"
+                        rotation="0 0 0" 
+                        width="3" 
+                        height="10" 
+                        depth="0.25">
+                    </a-box>
+                    <a-box 
+                        position="0 -6 0" 
+                        src="#strawH"
+                        normal-map="assets/StrawNMH.png"
+                        repeat="0.3 0.4"
+                        normal-texture-repeat="0.3 0.4"
+                        width="3" 
+                        height="4" 
+                        depth="0.25">
+                    </a-box>
+                </a-box>
+            </a-box>
+            <a-box 
+                rotation="0 60 90" 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="2.1 1"
+                normal-texture-repeat="2.1 1"
+                position="2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+            <a-box 
+                rotation="0 -60 90" 
+                src="#strawH"
+                normal-map="assets/StrawNMH.png"
+                repeat="2.1 1"
+                normal-texture-repeat="2.1 1"
+                position="-2.5 0 14.25" 
+                height="10" 
+                depth="0.25" 
+                width="21">
+            </a-box>
+        </a-plane>
+    </a-scene>
+</body>
+
+</html>
